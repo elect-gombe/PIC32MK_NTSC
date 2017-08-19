@@ -18,7 +18,7 @@ void calc_wave(uint8_t r,uint8_t g,uint8_t b){
   double r_y = (-g*0.587-0.114*b+0.701*r)/256;
 
   double n;
-  double err;
+  double err = 0;
 
   uint8_t reordered[2][3];
   for(i=0;i<_CLOCK_DIVIDE;i++){
