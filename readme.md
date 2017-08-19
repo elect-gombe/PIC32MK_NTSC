@@ -1,27 +1,24 @@
-# PIC32MK 3.58MHz Sin wave generator
+# PIC32MK NTSC生成
 
 ## 仕様
 - 3.58MHz
 - 5bitDAC
 - 14.31818MHz clystal使用
 - 内部32倍(114.56MHz)
-- 出力サンプリング周波数 28.64MHz(8倍)
+- 出力サンプリング周波数 57.28MHz(16倍)
 
 ## 回路
 
 ```
 61 (RPB11 = SDO3) --- 1k  Ohm --+
-62 (PRB12 = SDO2) --- 200 Ohm --+
-63 (RPB13 = SDO6) --- 510 Ohm --+----+
- 2 (RPB14 = SDO4) --- 2k0 Ohm --+   51 Ohm
+ 2 (RPB14 = SDO4) --- 2k0 Ohm --+---51 Ohm
  3 (RPB15 = SDO5) --- 4k2 Ohm --+    |
                                     GND
 ```
 
 ## 仕組みというか
 ### SPI
-Enhanced buffer mode is enabled.
-BRG = 1(114.56/4)
+拡張バッファを有効にしてDMAの転送トリガーの負荷を減らしています。
 
 ### DMA
 12バイト転送
