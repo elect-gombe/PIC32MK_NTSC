@@ -23,7 +23,7 @@ void calc_wave(uint8_t r,uint8_t g,uint8_t b){
   uint8_t reordered[2][3];
   for(i=0;i<_CLOCK_DIVIDE;i++){
     theta = 2*3.14159265358979323*i/_CLOCK_DIVIDE;
-    n = (y+0.4921*b_y*sin(theta)+0.8773*r_y*cos(theta)+0.4)*4.13;
+    n = (y+0.4921*b_y*sin(theta)+0.8773*r_y*cos(theta)+0.35)*4.13;
     output[i] = n+err;   //prev err correction.
     err += n-output[i];  //calculate err of output.
   }
