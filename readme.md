@@ -1,5 +1,9 @@
 # PIC32MK NTSC生成
 
+# なんと！！kenkenさんが拡張してくれました！！！
+こっちのほうが使いやすいのでこちらを参照。
+http://www.ze.em-net.ne.jp/~kenken/spicomposite/index.html
+
 ## 仕様
 - 3.58MHz
 - 5bitDAC
@@ -25,3 +29,7 @@
 ### DMA
 12バイト転送
 TMR2タイミングを見計らって、データが切れる前に前もって送信
+
+### その他
+ここにも僅かに書きました。雑ですね。すみません。
+http://gombe.azurewebsites.net/2017/09/16/pic32mk-spix3%e3%81%a7ntsc/
